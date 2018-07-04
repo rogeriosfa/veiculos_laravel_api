@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Veiculo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class VeiculosController extends Controller
      */
     public function index()
     {
-        //
+        return \App\Veiculos::all();
     }
 
     /**
@@ -25,7 +26,7 @@ class VeiculosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return \App\Veiculos::create($request->all());
     }
 
     /**
