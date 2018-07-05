@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Veiculo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent\Model;
 
 class VeiculosController extends Controller
 {
@@ -16,6 +17,22 @@ class VeiculosController extends Controller
     public function index()
     {
         return \App\Veiculos::all();
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request)
+    {
+        $q = $request->input('q');
+        return \App\Veiculos::where('veiculo', 'like', '%'.$q.'%')
+        ->orWhere('marca', 'like', '%'.$q.'%')
+        ->orWhere('descricao', 'like', '%'.$q.'%')
+        ->orWhere('ano', 'like', '%'.$q.'%')
+        ->get();
     }
 
     /**
@@ -37,7 +54,7 @@ class VeiculosController extends Controller
      */
     public function show($id)
     {
-        return App\Veiculos::find($id);
+        return \App\Veiculos::find($id);
     }
 
     /**
@@ -49,7 +66,7 @@ class VeiculosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $veiculo = App\Veiculos::find($id);
+        $veiculo = \App\Veiculos::find($id);
         $veiculo->update($request->all());
         return $veiculo;
     }
@@ -62,8 +79,8 @@ class VeiculosController extends Controller
      */
     public function destroy($id)
     {
-        $veiculo = App\Veiculos::find($id);
-        $flight->delete();
+        $veiculo = \App\Veiculos::find($id);
+        $veiculo->delete();
         return;
     }
 }
