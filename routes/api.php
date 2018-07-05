@@ -23,5 +23,9 @@ use Illuminate\Http\Request;
 
 Route::prefix('veiculos')->group(function () {
     Route::get('', 'API\VeiculosController@index');
+    Route::get('find', 'API\VeiculosController@index');
+    Route::get('{id}', 'API\VeiculosController@show');
     Route::post('', 'API\VeiculosController@store');
+    Route::put('{id}', 'API\VeiculosController@update');
+    Route::delete('{id}', 'API\VeiculosController@destroy');
 });
