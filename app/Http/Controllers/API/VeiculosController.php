@@ -37,7 +37,7 @@ class VeiculosController extends Controller
      */
     public function show($id)
     {
-        //
+        return App\Veiculos::find($id);
     }
 
     /**
@@ -49,7 +49,9 @@ class VeiculosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $veiculo = App\Veiculos::find($id);
+        $veiculo->update($request->all());
+        return $veiculo;
     }
 
     /**
@@ -60,6 +62,8 @@ class VeiculosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $veiculo = App\Veiculos::find($id);
+        $flight->delete();
+        return;
     }
 }
