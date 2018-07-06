@@ -41,4 +41,4 @@ Não esqueça de criar seu arquivo .env com as configurações do seu banco de d
     DB_PASSWORD=
 
 ### Projeto FrontEnd ###
-Estou desenvolvendo um projeto em Angular para manipular essa API, veja o repositorio aqui: [Projeto View Veiculos](https://github.com/rogeriosfa/veiculos_laravel_api)
+Estou desenvolvendo um projeto em Angular para manipular essa API, veja o repositorio aqui: [Projeto View Veiculos](https://github.com/rogeriosfa/veiculos_angular_view)
