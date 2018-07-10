@@ -50,6 +50,11 @@ Para popular alguns dados fakes no banco, execute:
 
     php artisan db:seed
 
+### Executar API ###
+para executar a API execute o seguinte comando:
+
+    php artisan serve
+
 ### Obs: ###
 
 Não esqueça de criar seu arquivo .env com as configurações do seu banco de dados local:
