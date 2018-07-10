@@ -19,6 +19,12 @@ Após a instalação do requisitos anteriores, execute seu mysql, abra em alguma
     DROP DATABASE IF EXISTS `db_veiculos`;
     CREATE DATABASE IF NOT EXISTS `db_veiculos`;
 
+### Instalação pacotes Laravel ###
+
+Para instalação dos pacotes do framework Laravel, abra um terminal na pasta do projeto e execute: 
+
+    composer install
+
 Para criação das tabelas, abra um terminal na pasta do projeto e execute: 
 
     php artisan migrate
