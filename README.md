@@ -39,7 +39,7 @@ Para criação das tabelas, abra um terminal na pasta do projeto e execute:
     php artisan migrate
 
 ### Alternativa ao Migrate ###
-Como alternativa ao migrate anexei um script da criação ao banco de dados, procuro no fonte do projeto.
+Como alternativa ao migrate anexei um script da criação ao banco de dados, procure no fonte do projeto.
 
     db_veiculos.sql
 
