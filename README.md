@@ -25,6 +25,15 @@ Para instalação dos pacotes do framework Laravel, abra um terminal na pasta do
 
     composer install
 
+Crie o arquivo .env com as configurações do banco: 
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1 
+    DB_PORT= 
+    DB_DATABASE=db_veiculos 
+    DB_USERNAME=root 
+    DB_PASSWORD=
+
 Para criação das tabelas, abra um terminal na pasta do projeto e execute: 
 
     php artisan migrate
